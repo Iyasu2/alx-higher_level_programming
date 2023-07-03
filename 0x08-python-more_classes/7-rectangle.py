@@ -84,7 +84,7 @@ class Rectangle:
             return ""
         for i in range(self.height):
             for j in range(self.width):
-                result += self.print_symbol
+                result += str(self.print_symbol)
             result += '\n'
         return result
 
