@@ -59,12 +59,14 @@ class Rectangle:
 
     def area(self):
         '''
-        returns the area
+        returns the area by using the width and height
         '''
         return self.height * self.width
 
     def perimeter(self):
         '''
-        returns the parameter
+        returns the parameter using the width and height
         '''
+        if self.height == 0 or self.width == 0:
+            return 0
         return 2 * (self.height + self.width)
