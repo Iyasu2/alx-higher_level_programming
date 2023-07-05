@@ -69,3 +69,12 @@ exception with the message division by zero
     Traceback (most recent call last):
         ...
     ZeroDivisionError: division by zero
+
+matrix must be a list of integers or floats
+
+::
+
+    >>> matrix_divided[[3, “c”], [[1, 2], 3]]
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (array of arrays of integers/floats)
