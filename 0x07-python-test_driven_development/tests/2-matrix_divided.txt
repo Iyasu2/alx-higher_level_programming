@@ -74,7 +74,7 @@ matrix must be a list of integers or floats
 
 ::
 
-    >>> matrix_divided[[3, “c”], [[1, 2], 3]]
+    >>> matrix_divided[[3, “c”], 2]
     Traceback (most recent call last):
         ...
     TypeError: matrix must be a matrix (array of arrays of integers/floats)
