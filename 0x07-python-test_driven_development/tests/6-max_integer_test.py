@@ -8,6 +8,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
         self.assertEqual(max_integer([5, 8, 25, 24, 23]), 25)
         self.assertEqual(max_integer([0]), 0)
+        self.assertEqual(max_integer([5]), 5)
         self.assertEqual(max_integer([]), None)
         self.assertRaises(TypeError, max_integer, [1, 2, 'a', 4])
 
