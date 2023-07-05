@@ -79,3 +79,22 @@ exception with the message division by zero
         ...
     ZeroDivisionError: division by zero
 
+the function can only be called with two arguments
+
+::
+
+    >>> matrix_5 = [
+    ...     [1, 2, 3, 3000],
+    ...     [4, 5, 7, -200]
+    ... ]
+    >>> matrix_divided(matrix_5)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+::
+
+    >>> matrix_divided()
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
