@@ -44,3 +44,12 @@ It will raise errors if a or b are not integers or floats
     Traceback (most recent call last):
         ...
     TypeError: b must be an integer
+
+::
+
+    >>> a = float("inf")
+    >>> b = 10
+    >>> add_integer(a, b)
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
