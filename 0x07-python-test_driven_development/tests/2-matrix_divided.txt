@@ -98,3 +98,14 @@ the function can only be called with two arguments
     Traceback (most recent call last):
         ...
     TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+when divided by infinity, the matrix should all be 0
+
+::
+
+    >>> matrix_6 = [
+    ...     [1, 2, 3, 3000],
+    ...     [4, 5, 7, -200]
+    ... ]
+    >>> matrix_divided(matrix_6, float("inf"))
+    [[0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, -0.0]]
