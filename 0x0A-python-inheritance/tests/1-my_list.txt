@@ -5,8 +5,8 @@ method ''print_sorted'' that prints the sorted version of the list
 
     >>> import importlib
 
-    >>> module = importlib.import_module('1-my_list.py')
-    >>> Mylist = module.Mylist
+    >>> module = importlib.import_module('1-my_list')
+    >>> MyList = module.MyList
     >>> my_list = MyList()
     >>> my_list.append(1)
     >>> my_list.append(4)
@@ -14,7 +14,7 @@ method ''print_sorted'' that prints the sorted version of the list
     >>> my_list.append(3)
     >>> my_list.append(5)
     >>> my_list.print_sorted()
-	[1, 2, 3, 4, 5]
+    [1, 2, 3, 4, 5]
 
 methods of the list type should also work on the My_List class
 
