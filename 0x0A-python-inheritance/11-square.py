@@ -8,6 +8,9 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
+    '''
+    this is the class square
+    '''
     def __init__(self, size):
         '''
         this is instantiation method
