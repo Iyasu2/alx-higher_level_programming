@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-this module contains 
+this module contains
 an empty
 class
 '''
