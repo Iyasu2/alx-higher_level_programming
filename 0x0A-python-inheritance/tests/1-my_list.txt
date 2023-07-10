@@ -1,0 +1,53 @@
+''My_List'' is a class that inherits from the class or type list. It has also a
+method ''print_sorted'' that prints the sorted version of the list
+
+::
+
+    >>> import importlib
+
+    >>> module = importlib.import_module('1-my_list.py')
+    >>> Mylist = module.Mylist
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+
+methods of the list type should also work on the My_List class
+
+::
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> my_list.sort()
+    >>> print(my_list)
+    [1, 2, 3, 4, 5]
+    >>> print(my_list.pop(3))
+    4
+    >>> print(my_list)
+    [1, 2, 3, 5]
+
+exceptions raised in the list type should also be raised on My_List
+
+::
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.pop(8)
+    Traceback (most recent call last):
+        ...
+    IndexError: pop index out of range
+    >>> my_list.append("c")
+    >>> my_list.print_sorted()
+    Traceback (most recent call last):
+    ...
+    TypeError: '<' not supported between instances of 'str' and 'int'
