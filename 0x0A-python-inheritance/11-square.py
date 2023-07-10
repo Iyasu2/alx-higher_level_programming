@@ -24,7 +24,7 @@ class Square(Rectangle):
         returns the area of the square
         '''
         return self.__size * self. __size
-    
+
     def __str__(self):
         '''
         returns the string representation of the square
