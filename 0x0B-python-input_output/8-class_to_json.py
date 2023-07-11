@@ -8,7 +8,7 @@ of all the object's attributes
 
 def class_to_json(obj):
     '''
-    this function returns a dictionary of 
+    this function returns a dictionary of
     obj's attributes
     '''
     return obj.__dict__
