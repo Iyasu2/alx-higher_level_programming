@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''
-this module contains a script that 
-adds all arguments to a Python list 
+this module contains a script that
+adds all arguments to a Python list
 and then saves them to a file
 '''
 import json
