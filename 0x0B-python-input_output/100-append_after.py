@@ -7,6 +7,9 @@ each line containing a specific string
 
 
 def append_after(filename="", search_string="", new_string=""):
+    '''
+    this is function add new_string to filename after search_string
+    '''
     with open(filename, mode='r+', encoding='utf-8') as f:
         lines = f.readlines()
         f.seek(0)
