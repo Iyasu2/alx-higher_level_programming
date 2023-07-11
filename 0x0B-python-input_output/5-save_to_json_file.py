@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-import json
 '''
 this module contains
 a function that saves an object
 onto a file using json
 '''
+import json
+
 
 def save_to_json_file(my_obj, filename):
     '''
