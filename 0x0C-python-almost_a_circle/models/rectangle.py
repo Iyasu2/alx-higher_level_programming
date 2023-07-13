@@ -108,10 +108,9 @@ class Rectangle(Base):
         '''
         this method prints the rectangle with the character #
         '''
+        print("\n" * self.__y, end="")
         for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end="")
-            print()
+            print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
         '''
