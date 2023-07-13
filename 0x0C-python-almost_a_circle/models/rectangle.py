@@ -103,3 +103,12 @@ class Rectangle(Base):
         of the rectangle
         '''
         return self.__width * self.__height
+
+    def display(self):
+        '''
+        this method prints the rectangle with the character #
+        '''
+        for i in range(self.__height):
+            for j in range(self.__width):
+                print("#", end="")
+            print()
