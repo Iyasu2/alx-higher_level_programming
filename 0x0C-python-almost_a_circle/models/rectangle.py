@@ -121,7 +121,7 @@ class Rectangle(Base):
             f"{self.__width}/{self.__height}"
         )
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''
         this function updates the attributes with arguments
         '''
@@ -129,3 +129,6 @@ class Rectangle(Base):
             attrs = ["id", "width", "height", "x", "y"]
             for i in range(len(args)):
                 setattr(self, attrs[i], args[i])
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
