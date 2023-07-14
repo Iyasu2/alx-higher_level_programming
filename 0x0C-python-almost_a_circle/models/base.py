@@ -5,6 +5,7 @@ Base that manages id attributes
 of other classes
 '''
 import json
+import csv
 
 
 class Base:
@@ -35,6 +36,9 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        '''
+        saves to a json file
+        '''
         filename = cls.__name__ + ".json"
         if list_objs is None:
             list_objs = []
@@ -77,3 +81,38 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        '''
+        saves to a csv file
+        '''
+        filename = cls.__name__ + ".csv"
+        if list_objs is None:
+            list_objs = []
+        with open(filename, mode="w", encoding="utf-8") as f:
+            if cls.__name__ == "Rectangle":
+                fieldnames = ["id", "width", "height", "x", "y"]
+            elif cls.__name__ == "Square":
+                fieldnames = ["id", "size", "x", "y"]
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            for obj in list_objs:
+                writer.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        '''
+        loads from a file
+        '''
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, mode="r", encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                elif cls.__name__ == "Square":
+                    fieldnames = ["id", "size", "x", "y"]
+                return [cls.create(**{k: int(v) for k, v in row.items()}) for row in reader]
+        except FileNotFoundError:
+                return []
