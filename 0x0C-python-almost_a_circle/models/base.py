@@ -36,9 +36,6 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        '''
-        saves to a json file
-        '''
         filename = cls.__name__ + ".json"
         if list_objs is None:
             list_objs = []
@@ -84,9 +81,6 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        '''
-        saves to a csv file
-        '''
         filename = cls.__name__ + ".csv"
         if list_objs is None:
             list_objs = []
@@ -102,9 +96,6 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        '''
-        loads from a file
-        '''
         filename = cls.__name__ + ".csv"
         try:
             with open(filename, mode="r", encoding="utf-8") as f:
@@ -115,4 +106,10 @@ class Base:
                     fieldnames = ["id", "size", "x", "y"]
                 return [cls.create(**{k: int(v) for k, v in row.items()}) for row in reader]
         except FileNotFoundError:
-                return []
+            return []
+
+    def to_dictionary(self):
+        '''
+        this funcion returns dict version of class
+        '''
+        return self.__dict__
