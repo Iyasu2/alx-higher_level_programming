@@ -137,4 +137,10 @@ class Rectangle(Base):
         '''
         this funcion returns dict version of class
         '''
-        return self.__dict__
+        return {
+            "id": self.id,
+            "_Rectangle__x": self.__x,
+            "_Rectangle__y": self.__y,
+            "_Rectangle__width": self.__width,
+            "_Rectangle__height": self.__height,
+        }
