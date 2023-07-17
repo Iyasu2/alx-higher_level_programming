@@ -139,8 +139,8 @@ class Rectangle(Base):
         '''
         return {
             "id": self.id,
-            "_Rectangle__x": self.__x,
-            "_Rectangle__y": self.__y,
-            "_Rectangle__width": self.__width,
-            "_Rectangle__height": self.__height,
+            "x": self.x,
+            "y": self.y,
+            "width": self.width,
+            "height": self.height,
         }
