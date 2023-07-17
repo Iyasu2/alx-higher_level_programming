@@ -29,7 +29,7 @@ class TestBase_save_to_file(unittest.TestCase):
         r1 = Rectangle(10, 7, 2, 8)
         Rectangle.save_to_file([r1])
         with open("Rectangle.json", "r") as f:
-            self.assertEqual('[{"y": 8, "x": 2, "id": 1, "width": 10, "height": 7}]', f.read())
+            self.assertEqual('[{"id": 1, "x": 2, "y": 8, "width": 10, "height": 7}]', f.read())
 
     def test_save_one_square(self):
         '''
@@ -38,18 +38,18 @@ class TestBase_save_to_file(unittest.TestCase):
         s1 = Square(10, 7, 2, 8)
         Square.save_to_file([s1])
         with open("Square.json", "r") as f:
-            self.assertEqual('[{"y": 2, "x": 7, "id": 8, "size": 10}]', f.read())
+            self.assertEqual('[{"id": 8, "x": 7, "y": 2, "size": 10}]', f.read())
 
     def test_save_overwrite(self):
         '''
         this method tests for overwrite
         '''
-        s1 = Square(10, 2, 1)
+        s1 = Square(10, 2, 1, 1)
         Square.save_to_file([s1])
         s2 = Square(1, 1)
         Square.save_to_file([s2])
         with open("Square.json", "r") as f:
-            self.assertEqual('[{"y": 0, "x": 1, "id": 2, "size": 1}]', f.read())
+            self.assertEqual('[{"id": 2, "x": 1, "y": 0, "size": 1}]', f.read())
 
     def test_save_no_args(self):
         '''
