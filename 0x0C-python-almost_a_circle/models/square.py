@@ -1,7 +1,7 @@
 #!/usr/bion/python3
 '''
 this module contains a class
-square that inherits from the 
+square that inherits from the
 class Rectangle
 '''
 from models.rectangle import Rectangle
@@ -16,6 +16,15 @@ class Square(Rectangle):
         this is the instantiation method
         '''
         super().__init__(size, size, x, y, id)
+
+    def __str__(self):
+        '''
+        this method overrides the str from the parent class
+        '''
+        return (
+            f"[Square] ({self.id}) {self.x}/{self.y} - "
+            f"{self.width}"
+        )
 
     @property
     def size(self):
@@ -36,15 +45,6 @@ class Square(Rectangle):
 
         self.width = value
         self.height = value
-
-    def __str__(self):
-        '''
-        this method overrides the str from the parent class
-        '''
-        return (
-            f"[Square] ({self.id}) {self.x}/{self.y} - "
-            f"{self.width}"
-        )
 
     def update(self, *args, **kwargs):
         '''
