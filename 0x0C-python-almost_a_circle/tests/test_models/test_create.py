@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''
-this module contains tests 
-for the create function of 
+this module contains tests
+for the create function of
 the Base class
 '''
 import unittest
@@ -10,7 +10,7 @@ from models.rectangle import Rectangle
 from models.square import Square
 
 
-class Test_Base_Create(unittest.TestCase):
+class Test_Create(unittest.TestCase):
     '''
     class test of the create base function
     '''
