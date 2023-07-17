@@ -104,7 +104,10 @@ class Base:
                     fieldnames = ["id", "width", "height", "x", "y"]
                 elif cls.__name__ == "Square":
                     fieldnames = ["id", "size", "x", "y"]
-                return [cls.create(**{k: int(v) for k, v in row.items()}) for row in reader]
+                return [cls.create(**{k:
+                        int(v) for k, v in
+                        row.items()}) for row in
+                        reader]
         except FileNotFoundError:
             return []
 
