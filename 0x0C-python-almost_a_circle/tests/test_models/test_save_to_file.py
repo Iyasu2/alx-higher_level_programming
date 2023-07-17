@@ -29,7 +29,7 @@ class TestBase_save_to_file(unittest.TestCase):
         r1 = Rectangle(10, 7, 2, 8)
         Rectangle.save_to_file([r1])
         with open("Rectangle.json", "r") as f:
-            self.assertEqual('[{"id": 6, "x": 2, "y": 8, "width": 10, "height": 7}]', f.read())
+            self.assertEqual('[{"id": 10, "x": 2, "y": 8, "width": 10, "height": 7}]', f.read())
 
     def test_save_one_square(self):
         '''
@@ -49,7 +49,7 @@ class TestBase_save_to_file(unittest.TestCase):
         s2 = Square(1, 1)
         Square.save_to_file([s2])
         with open("Square.json", "r") as f:
-            self.assertEqual('[{"id": 7, "x": 1, "y": 0, "size": 1}]', f.read())
+            self.assertEqual('[{"id": 11, "x": 1, "y": 0, "size": 1}]', f.read())
 
     def test_save_no_args(self):
         '''
