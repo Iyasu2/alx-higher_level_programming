@@ -13,7 +13,6 @@ from sqlalchemy.orm import sessionmaker
 
 engine = create_engine('mysql://{}:{}@localhost:3306/{}'.format(
                         sys.argv[1], sys.argv[2], sys.argv[3]))
-Base = declarative_base()
 
 if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
