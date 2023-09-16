@@ -23,5 +23,4 @@ if __name__ == '__main__':
     else:
         print(states.id)
 
-
     session.close()
