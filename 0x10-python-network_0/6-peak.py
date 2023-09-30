@@ -22,7 +22,8 @@ def find_peak(list_of_integers):
     start, end = 0, length - 1
     while start < end:
         mid = start + (end - start) // 2
-        if unsorted[mid] > unsorted[mid - 1] and unsorted[mid] > unsorted[mid + 1]:
+        if unsorted[mid] > unsorted[mid - 1] and \
+                unsorted[mid] > unsorted[mid + 1]:
             return unsorted[mid]
         if unsorted[mid - 1] > unsorted[mid + 1]:
             end = mid
