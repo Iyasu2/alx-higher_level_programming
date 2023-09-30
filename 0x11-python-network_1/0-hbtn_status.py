@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-'''
+"""
 this module contains code
 that fetches a status code
 from a url
-'''
+"""
 import urllib.request
 
 
