@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
+#!/bin/bash
 #printing size of response body
 curl -sL -w "%{size_download}" -o /dev/null "$1"; echo
