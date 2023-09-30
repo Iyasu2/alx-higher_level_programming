@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
-this module contains code
-that fetches a status code
-from a url
+this module contains code that sends a request
+to a url given as argument
 """
 import urllib.request
 import sys
