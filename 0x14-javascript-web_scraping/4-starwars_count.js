@@ -12,13 +12,8 @@ request.get(url, (error, response, body) => {
     console.log(response.statusCode);
   } else {
     const movie = JSON.parse(body).results;
-    let count = 0;
-
-    movie.forEach((film) => {
-      if (film.characters.includes(charurl)) {
-        count++;
-      }
-    });
+    const moviesString = JSON.stringify(movie);
+    const count = moviesString.split(charurl).length - 1;
 
     console.log(count);
   }
